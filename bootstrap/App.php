@@ -19,14 +19,16 @@ try {
         exit;
     }
 
-    Route::addEventHandler(
-        (new RouteSubPath(env('CONFIG_APP_PATH')))->handler()
-    );
+    // Route::addEventHandler(
+    //     (new RouteSubPath(env('CONFIG_APP_PATH')))->handler()
+    // );
 
     Route::csrfVerifier(new CsrfVerifier);
     Route::setDefaultNamespace('\App\Http\Controllers');
 
     require __DIR__ . '/../routers/web.php';
+
+    // Route::enableMultiRouteRendering(false);
 
     Route::start();
 } catch (\Exception $exception) {

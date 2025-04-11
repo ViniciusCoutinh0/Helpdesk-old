@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Sora:wght@300;400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="<?= asset('resources/css/app.css'); ?>">
+    <link rel="stylesheet" href="<?= asset('assets/app.css'); ?>">
     <link rel="shortcut icon" href="<?= asset('favicon.ico'); ?>" />
 
 </head>
@@ -18,7 +18,7 @@
     <?php if (Session()->has('USER_ID')) : ?>
         <header>
             <div class="user">
-                <img src="<?= asset('storage/avatar/'.mb_strtoupper($user->Username[0]).'.png'); ?>" alt="avatar.png" class="avatar" />
+                <img src="<?= asset('storage/avatar/' . mb_strtoupper($user->Username[0]) . '.png'); ?>" alt="avatar.png" class="avatar" />
                 <a href="<?= url('app.home'); ?>" class="text-reset text-decoration-none">
                     Olá, <strong><?= mb_strtoupper($user->Username); ?></strong>
                 </a>
@@ -40,7 +40,7 @@
     </main>
 </body>
 
-<script src="<?= asset('resources/javascript/leopard2.js'); ?>"></script>
+<script src="<?= asset('assets/leopard2.js'); ?>"></script>
 
 <?php if (Session()->has('USER_ID')) : ?>
     <script type="text/javascript">
