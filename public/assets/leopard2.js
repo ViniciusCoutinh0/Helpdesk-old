@@ -31,7 +31,7 @@ function categories() {
     clearTimeout(timeout);
 
     timeout = setTimeout(() => {
-      fetch("/helpdesk/request/type/category", {
+      fetch("/request/type/category", {
         method: "POST",
         body: JSON.stringify({ words: this.value }),
         mode: "cors",
@@ -98,7 +98,7 @@ function categories() {
                 elements.attachmentSmall.textContent = "(opcional)";
               }
 
-              fetch("/helpdesk/request/type/fields", {
+              fetch("/request/type/fields", {
                 method: "POST",
                 body: JSON.stringify({ id: subcategory }),
                 mode: "cors",
@@ -197,7 +197,7 @@ function employee(id) {
   const entity = document.getElementById(id);
 
   entity.addEventListener("blur", function () {
-    fetch("/helpdesk/request/type/entity", {
+    fetch("/request/type/entity", {
       method: "POST",
       body: JSON.stringify({
         entity: this.value,
