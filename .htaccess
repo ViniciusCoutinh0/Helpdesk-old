@@ -1,0 +1,20 @@
+RewriteEngine On
+
+<FilesMatch "\.env$">
+    Deny from all
+</FilesMatch>
+
+# ROUTER WWW Redirect.
+# RewriteCond %{HTTP_HOST} !^www\. [NC]
+# RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ROUTER HTTPS Redirect
+# RewriteCond %{HTTP:X-Forwarded-Proto} !https
+# RewriteCond %{HTTPS} off
+# RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# ROUTER URL Rewrite
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-l
+RewriteRule ^(.*)$ index.php/$1

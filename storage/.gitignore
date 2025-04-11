@@ -1,0 +1,9 @@
+sessions/*
+uploads/*
+logs/*
+token/*
+
+!sessions/.gitkeep
+!uploads/.gitkeep
+!logs/.gitkeep
+!token/.gitkeep

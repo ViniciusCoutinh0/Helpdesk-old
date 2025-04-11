@@ -1,0 +1,36 @@
+{
+    "name": "viniciuscoutinh0/leopard",
+    "description": "Sistema de Tickets com integra\u0000\u0000o com Artia.",
+    "type": "project",
+    "require": {
+        "league/plates": "v4.0.0-alpha",
+        "phpmailer/phpmailer": "6.1.2",
+        "himik/simple-graphql-query-builder": "^0.2.4",
+        "vlucas/phpdotenv": "v5.3.0",
+        "league/csv": "^9.7",
+        "pecee/simple-router": "4.3.7.2",
+        "monolog/monolog": "^2.3"
+    },
+    "config": {
+        "vendor-dir": "vendor"
+    },
+    "autoload": {
+        "psr-4": {
+            "App\\": "app/"
+        },
+        "files": [
+            "app/Helpers/Helper.php"
+        ]
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Vinicius Coutinho",
+            "email": "vinicius@promofarma.com.br"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require-dev": {
+        "symfony/var-dumper": "^5.3"
+    }
+}
